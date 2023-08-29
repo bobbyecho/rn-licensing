@@ -1,9 +1,104 @@
-<mxfile host="app.diagrams.net" modified="2023-08-29T16:28:11.469Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" version="21.7.0" etag="jyND97KgW6AG1WqF3Uk3" type="github">
-  <diagram name="Page-1" id="RjgmoXscVRMcafdtMGdy">
-    <mxGraphModel>
+<mxfile host="app.diagrams.net" modified="2023-08-29T17:41:02.894Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="LiYQWiZ1PzHOy7nlW-WW" version="21.7.0" type="github" pages="2">
+  <diagram name="license generator" id="RjgmoXscVRMcafdtMGdy">
+    <mxGraphModel dx="603" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="GS1D9_I3of9Zailo7m8h-2" value="Digital Signature using&amp;nbsp;&lt;br&gt;&lt;a style=&quot;font-family: Inter, &amp;quot;system-ui&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Fira Sans&amp;quot;, &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; letter-spacing: var(--heading-letter-spacing); text-align: start; box-sizing: border-box; text-decoration-line: none; text-decoration-skip-ink: auto; width: fit-content; font-size: 21px;&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/verify#rsassa-pkcs1-v1_5&quot;&gt;RSASSA-PKCS1-v1_5&lt;/a&gt;&amp;nbsp;&lt;br&gt;for offline verification" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="145" y="260" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GS1D9_I3of9Zailo7m8h-5" value="Generate&lt;br&gt;PrivKey + PubKey" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="385" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GS1D9_I3of9Zailo7m8h-6" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="180" y="415" as="sourcePoint" />
+            <mxPoint x="240" y="415" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GS1D9_I3of9Zailo7m8h-7" value="Create Signature&lt;br&gt;&lt;br&gt;PrivKey + appId" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="375" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="GS1D9_I3of9Zailo7m8h-10" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="414.63" as="sourcePoint" />
+            <mxPoint x="420" y="414.63" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GS1D9_I3of9Zailo7m8h-11" value="Store&lt;br&gt;&lt;br&gt;- Signature&lt;br&gt;- privKey&lt;br&gt;- pubKey" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="370" width="120" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="GS1D9_I3of9Zailo7m8h-12" value="&lt;h1&gt;notes:&lt;/h1&gt;&lt;p&gt;- signature will be used as license&lt;br&gt;&lt;br&gt;- exchange pubKey through API (encrypted) in runtime&lt;br&gt;&lt;br&gt;- Verify license code in runtime (pubKey + signature + appId)&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="490" width="420" height="130" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="qr0w8nEDN25OZxPpyz3m" name="license verification">
+    <mxGraphModel dx="1431" dy="571" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SaDKPLZctTIczTZHRe0h-1" value="Entry Point&lt;br&gt;&lt;br&gt;withVerificator(App.tsx)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="270" width="225" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SaDKPLZctTIczTZHRe0h-2" value="licenseContext" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="210" y="343" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="SaDKPLZctTIczTZHRe0h-3" value="Screen Home&lt;br&gt;&lt;br&gt;withLicense(Home.tsx)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="450" width="225" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SaDKPLZctTIczTZHRe0h-5" value="api/license-exchange" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="415" y="10" width="240" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="SaDKPLZctTIczTZHRe0h-7" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.602;entryY=0.956;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.602;exitY=0.011;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="SaDKPLZctTIczTZHRe0h-1" target="SaDKPLZctTIczTZHRe0h-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="266" as="sourcePoint" />
+            <mxPoint x="560" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SaDKPLZctTIczTZHRe0h-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="SaDKPLZctTIczTZHRe0h-1" target="SaDKPLZctTIczTZHRe0h-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="300" as="sourcePoint" />
+            <mxPoint x="210" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="270" y="305" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SaDKPLZctTIczTZHRe0h-11" value="&lt;h1&gt;Req PubKey&lt;/h1&gt;&lt;p&gt;{&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; signature: &quot;xxxx&quot;,&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; appId: &quot;xxxxx&quot;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;}&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="593" y="140" width="190" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="SaDKPLZctTIczTZHRe0h-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.438;exitY=0.952;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.424;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="SaDKPLZctTIczTZHRe0h-5" target="SaDKPLZctTIczTZHRe0h-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="140" as="sourcePoint" />
+            <mxPoint x="520.47" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SaDKPLZctTIczTZHRe0h-14" value="&lt;h1&gt;Res&lt;/h1&gt;&lt;p&gt;{&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; pubKey: &quot;xxxx&quot;,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;}&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="410" y="140" width="106" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="SaDKPLZctTIczTZHRe0h-15" value="&lt;h1&gt;Store PubKey&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="230" width="106" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="SaDKPLZctTIczTZHRe0h-17" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SaDKPLZctTIczTZHRe0h-2" target="SaDKPLZctTIczTZHRe0h-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="480" as="sourcePoint" />
+            <mxPoint x="420" y="490" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="270" y="485" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SaDKPLZctTIczTZHRe0h-18" value="&lt;h1&gt;Read Pubkey&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="490" width="106" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="SaDKPLZctTIczTZHRe0h-19" value="&lt;h1&gt;Verify License&lt;/h1&gt;&lt;p&gt;- Read pubKey from licenseContext&lt;/p&gt;&lt;p&gt;- verify license (pubKey + signature/license code + appId)&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="425" y="530" width="355" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="jhRjJwQFjMJ6O9htOGFd-1" value="&lt;h1&gt;Explanation&lt;/h1&gt;&lt;p&gt;- &lt;b&gt;withVerificator &amp;amp; withLicense&lt;/b&gt; will be create as HOC (High Order Component) that allow us to wrap a logic inside component, and give the ability to another component&lt;/p&gt;&lt;p&gt;-&amp;nbsp;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;licenseContext&amp;nbsp;&lt;/b&gt;connecting around&amp;nbsp;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;withVerificator&lt;/b&gt;&amp;nbsp;and&amp;nbsp;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;withLicense&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;- &lt;b&gt;withVerificator&lt;/b&gt;&amp;nbsp;requesting pubKey through API on startup&lt;/p&gt;&lt;p&gt;- &lt;b&gt;withLicense &lt;/b&gt;will verify the integrity all the component wrapped by&lt;/p&gt;&lt;p&gt;- if someone remove &lt;b&gt;withVerificator&lt;/b&gt;, components that wrapped by &lt;b&gt;withLicense &lt;/b&gt;will automatically return error, due to missing pubKey.&lt;/p&gt;&lt;p&gt;- The problem is, if someone remove &lt;b&gt;withLicense &lt;/b&gt;from the component&lt;b&gt;, &lt;/b&gt;nothing will happen. Wrap existing screen is the easiest way, but too easy to cracked.&lt;/p&gt;&lt;p&gt;- The best way to make it non-accessable is by wrap common components (such as: Text, Button, View, etc) and host in private registry (npmjs). Removing from reusable component is difficult for attacker, because reusable components scattered everywhere, but also it is hard to migrate from existing project&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-310" y="920" width="450" height="340" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
